@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Dict, Any
 
 # Add ML package to path for imports.
-sys.path.insert(0, str(Path(__file__).resolve().parents[3] / "ml" / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "ml" / "src"))
 
 from musicai_ml import analyze_audio
 from ..core.session import session_dir
