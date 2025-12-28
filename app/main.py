@@ -35,7 +35,7 @@ def _configure_cors(app: FastAPI) -> None:
     """
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["*"],  # Narrow in production.
+        allow_origins=["https://music-ai-analysis.vercel.app/"],  # Narrow in production.
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
