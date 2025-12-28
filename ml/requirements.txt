@@ -1,0 +1,2 @@
+# ML layer depends on the unified backend stack.
+-r ../backend/requirements.txt
