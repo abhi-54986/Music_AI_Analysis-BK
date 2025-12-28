@@ -37,11 +37,12 @@ def _configure_cors(app: FastAPI) -> None:
         CORSMiddleware,
         allow_origins=[
             "https://music-ai-analysis.vercel.app",
-            "http://localhost:5173",
-            "http://127.0.0.1:5173",
+            
         ],
+        # Allow all Vercel preview domains like https://<hash>.vercel.app
+        allow_origin_regex=r"https://.*\\.vercel\\.app$",
         allow_credentials=True,
-        allow_methods=["*"],
+        allow_methods=["*"],  # include OPTIONS for preflight
         allow_headers=["*"],
     )
 
