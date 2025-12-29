@@ -35,11 +35,10 @@ def _configure_cors(app: FastAPI) -> None:
     """
     app.add_middleware(
         CORSMiddleware,
-        # Relaxed CORS: we don't use cookies, so credentials are not needed.
+        # Allow all origins for public deployment
         allow_origins=["*"],
-        allow_origin_regex=r"https://.*\\.vercel\\.app$",
         allow_credentials=False,
-        allow_methods=["*"],  # include OPTIONS for preflight
+        allow_methods=["*"],
         allow_headers=["*"],
     )
 
